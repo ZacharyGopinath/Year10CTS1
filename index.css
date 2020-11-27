@@ -1,0 +1,256 @@
+:root{
+    --text-primary:#f8f8f2;
+    --text-secondary:#ff5555;
+    --bg-primary:#44475a;
+    --bg-secondary:#6272a4;
+    --bg-darkmode:#282a36;
+    --bd-primary:#f1fa8c;
+    --bd-secondary:#ff79c6;
+    --font-family:'Roboto', 'sans-serif';
+}
+
+body{
+    font-family:var(--font-family);
+    margin:0px;
+    transition:0.2s;
+    background-color:var(--bg-darkmode);
+    color:var(--text-primary);
+    text-shadow: 1px 1px 2px black;
+}
+.darkMode{
+    font-family:var(--font-family);
+    margin:0px;
+    transition:0.2s;
+    background-color:var(--text-primary);
+    color:var(--bg-darkmode);
+    text-shadow: 1px 1px 2px black;
+}
+#topHeader{
+    border:2px solid var(--text-primary);
+    display:flex;
+}
+#topHeaderDark{
+    border:2px solid var(--text-secondary);
+    display:flex;
+}
+#logo{
+    width:100px;
+    height:100px;
+}
+#title{
+    font-size: 50px;
+}
+.container{
+    display:grid;
+}
+
+.buttonsDiv{
+    border:2px solid var(--text-secondary);
+    width:200px;
+    height:100%;
+    position: fixed;
+    z-index:1;
+    overflow-x: hidden;
+    background-color:var(--bg-darkmode);
+    grid-row:2;
+    
+}
+.buttonsDivLight{
+    border:2px solid var(--text-secondary);
+    width:200px;
+    height:100%;
+    position:fixed;
+    z-index:1;
+    overflow-x: hidden;
+    background-color:var(--text-primary);
+}
+.buttonsDiv a{
+    padding:8px 8px 15px 32px;
+    text-decoration:none;
+    font-size:20px;
+    display:flex;
+    text-align: left;
+}
+#darkButton{
+    background-color:var(--bg-darkmode);
+}
+#lightButton{
+    background-color:var(--text-secondary);
+}
+#darkLogo{
+    font-size:30px;
+}
+
+.buttons{
+    transition:0.2s;
+    border:1px solid var(--text-primary);
+    color:var(--text-primary);
+    background-color: var(--text-secondary);
+    padding:5px;
+    cursor: pointer;
+}
+.buttons:hover{
+    transition:0.2s;
+    background-color:#ec3737
+}
+.buttonsDiv button.active{
+    background-color:var(--text-primary);
+    border: 1px solid var(--text-secondary);
+    color:var(--text-secondary);
+}
+
+.PPL{
+    height:100%;
+    width:100%;
+}
+
+.PPLDivs > div {
+    display:grid;
+}
+
+#playDiv{
+    display:grid;
+}
+#endScreen{
+    width:430px;
+    margin-bottom:10px;
+    background-color:var(--bg-primary);
+    border:3px solid var(--bd-primary);
+    margin:0px;
+    color:var(--text-secondary);
+}
+#endText{
+    display: absolute;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    margin-bottom:3px;
+    height:32px;
+    color:var(--text-secondary);
+}
+#testitle{
+    color:var(--text-secondary);
+    margin:0;
+}
+#board2{
+    width:405px;
+    background-color: #a67546;
+    border:2px solid var(--bd-primary);
+}
+#board2L{
+    width:410px;
+    background-color: var(--text-primary);
+    border:2px solid var(--bg-darkmode);
+}
+.stockfish{
+    border:2px solid var(--bd-primary);
+    background-color:#a67546;
+    width:400px;
+    display:grid;
+    margin-top:2px;
+    text-align:center;
+    font-size:small;
+}
+#result{
+    color:var(--text-primary);
+}
+#resultL{
+    color:var(--text-secondary);
+}
+
+#restartButton{
+    display:none;
+    position:absolute;
+    margin-top:3px;
+    left:680px;
+    padding:15px 15px 15px 15px;
+    text-decoration:none;
+    border:none;
+    font-size:20px;
+    background-color:var(--text-secondary);
+    text-align: center;
+    font:inherit;
+    color:var(--text-primary);
+    cursor: pointer;
+}
+
+.fenDiv{
+    position: absolute;
+    top:40%;
+    right:15%;
+    float:right;
+    border:2px solid var(--bd-secondary);
+    border-radius: 4px;
+    display:grid;
+}
+#fenInput{
+    font-size: 20px;
+    box-sizing: border-box;
+    margin:5px;
+    padding:12px 20px;
+    border:2px solid var(--bd-secondary);
+    border-radius: 4px;
+    text-align: center;
+}
+#fenSubmit{
+    height:100%;
+    width:100%;
+    cursor: pointer;
+    padding:8px 8px;
+    font-size: 15px;
+    border:2px solid var(--bd-secondary);
+    border-radius: 4px;
+}
+
+#practiceDiv{
+    display:none;
+}
+.puzzles{
+    width:60%;
+    display:grid;
+    border:2px solid var(--text-secondary);
+}
+
+#learnDiv{
+    display:none;
+}
+.openings{
+    display: inherit;
+    height:100%;
+    border:2px solid var(--bd-secondary);
+    font-size:20px;
+    color:var(--text-primary);
+    transition: 0.2s;
+    grid-template-rows: 200px 200px 200px;
+}
+.openingImage:hover{
+    transition:0.2s;
+    transform:scale(1.7);
+}
+.openingsL{
+    display: inherit;
+    height:100%;
+    border:2px solid var(--text-primary);
+    font-size:20px;
+    color:var(--text-secondary);
+    transition: 0.2s;
+}
+.openingsL:hover{
+    transition:0.2s;
+    transform:scale(1.7);
+}
+.Italian_Game{
+    background:var(--bg-secondary);
+    width:100%;
+    float:right;
+}
+.Giuoco_Piano{
+    background:var(--bd-primary);
+    width:100%;
+    float:right;
+}
+.Evans_Gambit{
+    background:var(--bg-primary);
+    width:100%;
+    float:right;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Creating the Solution Unit 1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/634570e804.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link rel="stylesheet" href="css/chessboard-0.3.0.min.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <div id="topHeader">
+        <div id="logoContainer">
+            <img src='logo.png' id='logo'>
+        </div>
+        <div id='websiteTitle'>
+            <center><h1 id='title'>Online Chess Website — Play — Practice — Learn</h1></center>
+        </div>
+    </div>
+
+    <div class='container'>
+        <div class='buttonsDiv'>
+            <a href='#' onclick='switchDisplay(event, "playDiv")' class='buttons' id='playButton'>Play</a>
+
+            <a href='#' onclick='switchDisplay(event, "practiceDiv")' class='buttons'>Practice</a>
+
+            <a href='#' onclick='switchDisplay(event, "learnDiv")' class='buttons'>Learn</a>
+
+            <a href='#' onclick='lightsOff()' class='buttons' id='darkButton'><i class='fas fa-adjust' id='darkLogo'></i></a>
+        </div>
+
+        <div class='PPLDivs'>
+            <div class='main_divs' id='playDiv'>
+                <center><h1 id='testitle'>PLAY</h1>
+                        <h1 id="endText"></h1>
+                        <button type='submit' onclick='restart()' id='restartButton'>Restart</button>
+                        <div id='board2'></div>
+                        <div class='stockfish'>
+                            <p id='result'>Stockfish Says Your Best Move Is: </p>
+                        </div>
+                        <div class='fenDiv'>
+                            <h1 id='fenTitle'>Input FEN: </h1>
+                            <input type='text' id='fenInput' placeholder='Paste FEN Here'>
+                            <input type='submit' id='fenSubmit' onclick='FEN()'>
+                        </div>
+                </center>
+            </div>
+            <div class='main_divs' id='practiceDiv'>
+                <center>
+                    <h1 id='testitle'>PRACTICE</h1>
+                    <center><div class='puzzles'>
+                        <div class='chesscomPuzzle'>
+                            <iframe src="https://www.chess.com/daily_puzzle" style="width: 450px; height: 490px;background-color:#6272a4;"></iframe>
+                        </div>
+                        <div class='puzzlesInfo'>
+                            <p id='puzzlesInfo'>Chess puzzles are seen as one of the most effective way to improve your chess skills. The goal in a given puzzle is to find the single best move or continuation.</p>
+                            <p id='puzzleLink'>For more free puzzles, visit <a href='lichess.org/training' target='_blank' style='color:#ff5555'>lichess.org/training</a></p>
+                        </div>
+                    </center>
+                    </div>
+                    
+                </center>
+            </div>
+            <div class='main_divs' id='learnDiv'>
+                <center><h1 id='testitle'>LEARN</h1></center>
+                    <div class='openings'>
+                        <center>
+                        <div class='Italian_Game opening'><a href='https://www.thechesswebsite.com/italian-game/' target="_blank" style='color:#ff5555'><p>Italian Game</p></a><img src='https://www.thechesswebsite.com/wp-content/uploads/2015/08/the-italian-game.jpg' class='openingImage' style='height:130px;width:130px'></div>
+                        <div class='Giuoco_Piano opening'><a href='https://www.thechesswebsite.com/giuoco-piano/' target="_blank" style='color:#ff5555'><p>Giuoco Piano</p></a><img src='https://374999-1254560-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2015/08/the-giuoco-piano.jpg' class='openingImage' style='height:130px;width:130px'></div>
+                        <div class='Evans_Gambit opening'><a href='https://www.thechesswebsite.com/evans-gambit/' target="_blank" style='color:#ff5555'><p>Evans Gambit</p></a><img src='https://www.thechesswebsite.com/wp-content/uploads/2012/07/evansgambit.jpg' class='openingImage' style='height:130px;width:130px;'></div>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js" integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.2/chess.js" integrity="sha384-s3XgLpvmHyscVpijnseAmye819Ee3yaGa8NxstkJVyA6nuDFjt59u1QvuEl/mecz" crossorigin="anonymous"></script>
+    <script src="./js/chessboard-0.3.0.js"></script>
+    <script src="stockfish.js"></script>
+    <script src='index.js'></script>
+</body>
+</html>
