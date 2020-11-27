@@ -29,5 +29,5 @@ function switchDisplay(evt, page) {
 
     document.getElementById(page).style.display = 'grid'; //displays the page whose respective button was pressed AKA display:'grid';
     evt.currentTarget.className += " active"; //sets it to active to be highlighted, which I did not utilize because I preferred how it looks without it
-                                                this could be used in the future
+                                                //this could be used in the future
 }
