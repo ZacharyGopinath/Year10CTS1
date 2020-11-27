@@ -1,0 +1,19 @@
+:root{
+    --text-primary:#f8f8f2;
+    --text-secondary:#ff5555;
+    --bg-primary:#44475a;
+    --bg-secondary:#6272a4;
+    --bg-darkmode:#282a36;
+    --bd-primary:#f1fa8c;
+    --bd-secondary:#ff79c6;
+    --font-family:'Roboto', 'sans-serif';
+}
+
+/* example use case */
+
+div{
+  --font-family:inherit;
+  color:var(--text-primary);
+  border:var(bd-secondary);
+  background-color:var(--bg-secondary);
+}
